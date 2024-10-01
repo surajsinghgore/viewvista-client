@@ -68,7 +68,6 @@ const Broadcast = () => {
 
   useEffect(() => {
     if (!isInitialized) return;
-
     socketRef.current = io('https://viewvista.onrender.com', {
       transports: ['websocket'],
       cors: {

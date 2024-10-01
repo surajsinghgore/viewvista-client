@@ -9,11 +9,11 @@ const PublicStreams = () => {
 
   useEffect(() => {
     const socketInstance = io("https://viewvista.onrender.com", {
-      transports: ["websocket"],
-      cors: {
-        origin: "https://viewvista-client.onrender.com",
-      },
-    });
+  transports: ["websocket"],
+  cors: {
+    origin: "https://viewvista-client.onrender.com",
+  },
+});
 
     setSocket(socketInstance);
 

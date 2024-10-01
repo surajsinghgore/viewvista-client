@@ -12,13 +12,12 @@ export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const socketInstance = io('https://viewvista.onrender.com', {
-      transports: ['websocket'],
-      cors: {
-        origin: 'https://viewvista-client.onrender.com',
-      },
-    });
-
+    const socketInstance = io("https://viewvista.onrender.com", {
+  transports: ["websocket"],
+  cors: {
+    origin: "https://viewvista-client.onrender.com",
+  },
+});
     socketInstance.on('connect', () => {
       console.log('Socket connected');
     });
